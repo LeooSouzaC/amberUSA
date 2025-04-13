@@ -1,0 +1,397 @@
+/* Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s ease-in-out;
+  z-index: 9999;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 4px;
+  background-color: #e0e0e0 !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background-color: black !important;
+  transition: width 3s linear;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+/* Header */
+.header {
+  background-image: url("img/sea.gif");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 8px 100px;
+  margin-bottom: 84px;
+}
+
+.logo {
+  width: 180px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-buttons-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-button {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.029rem;
+  line-height: 1.29;
+  padding: 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: top 0.5s ease;
+}
+
+.menu-overlay.active {
+  top: 0;
+}
+
+.menu-overlay ul {
+  list-style: none;
+  text-align: center;
+}
+
+.menu-overlay li {
+  margin: 20px 0;
+}
+
+.menu-overlay a {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.menu-overlay a:hover {
+  color: #999;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close-btn i:hover {
+  color: #999;
+}
+
+/* First Section (Header Content) */
+.first-section {
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 45%;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  background: #fff;
+  width: 70px;
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Common Section Styles */
+.common-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 84px;
+}
+
+.usable-common-section-area {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.common-text-area {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Cards - Our Advantages */
+.advantage-cards-area {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.advantages-cards {
+  display: flex;
+  gap: 16px;
+}
+
+.adv-card {
+  width: 50%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+}
+
+.adv-card h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.adv-card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Images - About Us */
+.image-area {
+  width: 50%;
+  display: flex;
+  gap: 16px;
+}
+
+/* .image-area img {
+  width: calc(50% - 16px);
+} */
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 100px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-text-area {
+  width: 50%;
+  text-align: left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  border-bottom: 1px solid #333;
+  background-color: transparent;
+  padding: 12px 8px;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #b8860b;
+}
+
+.contact-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+}
+
+/* Standard Components */
+.title {
+  font-weight: 200;
+  letter-spacing: 0.029rem;
+  line-height: 1.29;
+  font-family: "Playfair Display", serif;
+}
+
+.subtitle {
+  font-weight: 600;
+}
+
+.common-button {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 16px;
+}
+
+.large-button {
+  background-color: #b8860b;
+  border-radius: 24px;
+  border: none;
+  color: white;
+  box-shadow: none;
+  padding: 6px 20px;
+  font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .logo {
+    width: 140px;
+  }
+
+  .header {
+    background-image: url("img/sea.gif");
+    height: 100vh;
+    background-size: cover;
+    /* background-position: center;
+    background-repeat: no-repeat; */
+    padding: 8px 24px;
+    margin-bottom: 84px;
+  }
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .usable-common-section-area {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .common-text-area,
+  .advantage-cards-area {
+    width: 100%;
+  }
+
+  .advantages-cards {
+    flex-direction: column;
+  }
+
+  .adv-card {
+    width: 100%;
+  }
+
+  .image-area {
+    width: 90%;
+    display: flex;
+    gap: 16px;
+  }
+
+  .image-area img {
+    width: calc(50% - 16px);
+  }
+
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .contact-text-area,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
