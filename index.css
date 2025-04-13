@@ -27,6 +27,7 @@ body {
   justify-content: center;
   transition: transform 0.8s ease-in-out;
   -webkit-transition: transform 0.8s ease-in-out;
+  -ms-transition: transform 0.8s ease-in-out;
   z-index: 9999;
 }
 
@@ -44,11 +45,13 @@ body {
   background-color: black !important;
   transition: width 3s linear;
   -webkit-transition: width 3s linear;
+  -ms-transition: width 3s linear;
 }
 
 .hidden {
   transform: translateY(-100%);
   -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
 }
 
 /* Header */
